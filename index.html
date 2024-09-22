@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <!-- icon link -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
+    <title>Learnico - project-3</title>
+
+    <style>
+      #customRange1::-webkit-slider-runnable-track {
+        background: linear-gradient(
+          90deg,
+          #ff6347,
+          #4caf50
+        ); /* Custom track color */
+        height: 6px;
+        border-radius: 5px;
+      }
+
+      #customRange1::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 20px;
+        width: 20px;
+        background-color: #ffe100; /* Thumb color */
+        border-radius: 50%;
+        cursor: pointer;
+        margin-top: -7px; /* Align thumb with track */
+      }
+
+      #customRange1:focus {
+        outline: none; /* Remove default focus border */
+      }
+
+      #customRange1::-webkit-slider-thumb:focus {
+        background-color: #ffe100; /* Change thumb color when focused */
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <!-- header -->
+      <header class="position-fixed top-0 z-1 vw-100 shadow-lg">
+        <!-- top -->
+        <div class="top bg-black p-2">
+          <div class="container mx-auto">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-5">
+                <div class="login-and-register">
+                  <i class="uil uil-user text-warning fw-bold"></i>
+                  <a href="#" class="text-decoration-none text-white fw-bold"
+                    >Login or Register</a
+                  >
+                </div>
+                <div class="login-and-register">
+                  <i class="uil uil-home text-warning fw-bold"></i>
+                  <a href="#" class="text-decoration-none text-white fw-bold"
+                    >Submit Property</a
+                  >
+                </div>
+                <div class="login-and-register">
+                  <i class="uil uil-language text-warning fw-bold"></i>
+                  <a href="#" class="text-decoration-none text-white fw-bold"
+                    >English</a
+                  >
+                </div>
+              </div>
+
+              <div class="social-links d-flex align-items-center gap-3">
+                <a href="#"><i class="uil uil-facebook text-white"></i></a>
+                <a href="#"><i class="uil uil-twitter text-white"></i></a>
+                <a href="#"><i class="uil uil-google text-white"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- bottom -->
+        <div class="bottom bg-white">
+          <div class="container mx-auto">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="logo" style="height: 100px">
+                <img
+                  class="h-100 w-100"
+                  src="./assets/—Pngtree—blue yellow simple real estate_16224379.png"
+                  alt=""
+                />
+              </div>
+
+              <nav class="d-flex align-items-center gap-3">
+                <div class="d-flex gap-3 fw-bold">
+                  <a
+                    href="#"
+                    class="text-decoration-none px-2 border-warning text-black"
+                    style="border-bottom: 3px solid"
+                    >Home</a
+                  >
+                  <a href="#" class="text-decoration-none px-2 text-black"
+                    >About</a
+                  >
+                  <a href="#" class="text-decoration-none px-2 text-black"
+                    >Agent's</a
+                  >
+                  <a href="#" class="text-decoration-none px-2 text-black"
+                    >Property</a
+                  >
+                  <a href="#" class="text-decoration-none px-2 text-black"
+                    >Blogs
+                  </a>
+                  <a href="#" class="text-decoration-none px-2 text-black"
+                    >My accounts
+                  </a>
+                </div>
+
+                <div
+                  class="dial fw-bold text-center p-3 bg-warning"
+                  style="transform: skewX(-20deg)"
+                >
+                  <a href="#" class="text-white">
+                    <i class="uil uil-phone"></i> <br />
+                    195836
+                  </a>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="banner">
+        <div class="corusol">
+          <div
+            id="carouselExampleControls"
+            class="carousel slide"
+            data-ride="carousel"
+          >
+            <div class="carousel-inner position-relative">
+              <div class="carousel-item active">
+                <img
+                  class="d-block h-100 w-100 object-fit-cover"
+                  src="https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="First slide"
+                />
+                <div
+                  class="banner-content position-absolute"
+                  style="top: 34%; left: 389px; padding: 20px"
+                >
+                  <div
+                    style="
+                      background-color: rgba(0, 0, 0, 0.654);
+                      padding: 20px;
+                    "
+                  >
+                    <h1 class="h1 text-white">
+                      136, Seethakathi nagaer, Kayalpatinam, Tuticorin
+                    </h1>
+                    <div class="h2 text-white">
+                      $5,000 <span class="h6 text-warning">Month</span>
+                      <div
+                        class="h4 text-white bg-warning p-3 d-inline-block"
+                        style="transform: skewX(-20deg)"
+                      >
+                        For rent
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white p-2 mt-0 d-flex align-items-center gap-4"
+                  >
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archway text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">500 Sqr ft</div>
+                        <p>Area</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bed text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">4</div>
+                        <p>Bedrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bath text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">2</div>
+                        <p>Bathrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archive text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">1</div>
+                        <p>Corage</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img
+                  class="d-block h-75 w-100 object-fit-cover"
+                  src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Second slide"
+                />
+                <div
+                  class="banner-content position-absolute"
+                  style="top: 34%; left: 389px; padding: 20px"
+                >
+                  <div
+                    style="
+                      background-color: rgba(0, 0, 0, 0.654);
+                      padding: 20px;
+                    "
+                  >
+                    <h1 class="h1 text-white">
+                      99, Annai hajira college road, Melapalayam, Tirunelveli
+                    </h1>
+                    <div class="h2 text-white">
+                      $4,000 <span class="h6 text-warning">Month</span>
+                      <div
+                        class="h4 text-white bg-warning p-3 d-inline-block"
+                        style="transform: skewX(-20deg)"
+                      >
+                        For rent
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white p-2 mt-0 d-flex align-items-center gap-4"
+                  >
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archway text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">300 Sqr ft</div>
+                        <p>Area</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bed text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">2</div>
+                        <p>Bedrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bath text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">3</div>
+                        <p>Bathrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archive text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">1</div>
+                        <p>Corage</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img
+                  class="d-block h-75 w-100 object-fit-cover"
+                  src="https://images.unsplash.com/photo-1448630360428-65456885c650?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Third slide"
+                />
+                <div
+                  class="banner-content position-absolute"
+                  style="top: 34%; left: 389px; padding: 20px"
+                >
+                  <div
+                    style="
+                      background-color: rgba(0, 0, 0, 0.654);
+                      padding: 20px;
+                    "
+                  >
+                    <h1 class="h1 text-white">
+                      71, Vaikka palam, Melapalayam, Tirunelveli
+                    </h1>
+                    <div class="h2 text-white">
+                      $6,000 <span class="h6 text-warning">Month</span>
+                      <div
+                        class="h4 text-white bg-warning p-3 d-inline-block"
+                        style="transform: skewX(-20deg)"
+                      >
+                        For rent
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white p-2 mt-0 d-flex align-items-center gap-4"
+                  >
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archway text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">600 Sqr ft</div>
+                        <p>Area</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bed text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">4</div>
+                        <p>Bedrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bath text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">4</div>
+                        <p>Bathrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archive text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">2</div>
+                        <p>Corage</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item position-relative">
+                <img
+                  class="d-block h-75 w-100 object-fit-cover"
+                  src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Third slide"
+                />
+                <div
+                  class="banner-content position-absolute"
+                  style="top: 34%; left: 389px; padding: 20px"
+                >
+                  <div
+                    style="
+                      background-color: rgba(0, 0, 0, 0.654);
+                      padding: 20px;
+                    "
+                  >
+                    <h1 class="h1 text-white">
+                      701, Rajaji nager, Township, Chettikuzham, Koodankulam,
+                      Tirunelveli
+                    </h1>
+                    <div class="h2 text-white">
+                      $5,000 <span class="h6 text-warning">Month</span>
+                      <div
+                        class="h4 text-white bg-warning p-3 d-inline-block"
+                        style="transform: skewX(-20deg)"
+                      >
+                        For rent
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-white p-2 mt-0 d-flex align-items-center gap-4"
+                  >
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archway text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">450 Sqr ft</div>
+                        <p>Area</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bed text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">2</div>
+                        <p>Bedrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-bath text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">2</div>
+                        <p>Bathrooms</p>
+                      </div>
+                    </div>
+                    <div class="details d-flex gap-2 align-items-center">
+                      <i
+                        class="uil uil-archive text-warning"
+                        style="font-size: 55px"
+                      ></i>
+                      <div>
+                        <div class="h3">1</div>
+                        <p>Corage</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="button d-flex gap-3 position-absolute"
+              style="top: 30%; left: 400px; transform: translateY(-30%)"
+            >
+              <a
+                class="p-3 bg-warning"
+                style="transform: skewX(-20deg)"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="p-3 bg-warning"
+                style="transform: skewX(-20deg)"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="small-banner-and-filter-section p-5 bg-black">
+        <div class="container">
+          <div class="d-flex align-items-center justify-content-between">
+            <div class="small-banner">
+              <div class="h1 text-white fw-light opacity-75">DISCOVER YOUR</div>
+              <div class="h1 text-white" style="font-size: 85px">
+                <span class="text-warning">D</span>REAM
+              </div>
+              <div class="h1 text-white" style="font-size: 85px">
+                <span class="text-warning">H</span>OUSE
+              </div>
+            </div>
+
+            <div class="filter-section bg-dark p-4">
+              <div class="filter-button d-flex align-items-center">
+                <div class="first d-flex align-items-center">
+                  <i
+                    class="uil uil-search p-3 bg-black text-white"
+                    style="font-size: 27px"
+                  ></i>
+                  <div class="h2 p-3 bg-warning text-white mb-0">All</div>
+                </div>
+                <div class="h2 p-3 bg-black opacity-75 text-white mb-0">
+                  For rent
+                </div>
+                <div class="h2 p-3 bg-black opacity-75 text-white mb-0">
+                  For sale
+                </div>
+              </div>
+              <div class="inputs mt-3">
+                <div
+                  style="
+                    display: grid;
+                    grid-template-columns: 0.7fr 0.7fr 0.7fr;
+                    grid-gap: 10px;
+                  "
+                >
+                  <div>
+                    <input
+                      style="width: 100%"
+                      type="text"
+                      value="Item"
+                      class="p-3 bg-transparent border-1 border-white text-white opacity-75"
+                      placeholder="Item"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      style="width: 100%"
+                      type="text"
+                      value="Address"
+                      class="p-3 bg-transparent border-1 border-white text-white opacity-75"
+                      placeholder="Address"
+                    />
+                  </div>
+                  <div>
+                    <select
+                      class="form-select p-3 bg-transparent border-1 border-dark-subtle text-white opacity-75"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Line Agencies</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select
+                      class="form-select p-3 bg-transparent border-1 border-dark-subtle text-white opacity-75"
+                      aria-label="Default select example"
+                    >
+                      <option selected>All types</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select
+                      class="form-select p-3 bg-transparent border-1 border-dark-subtle text-white opacity-75"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Any Landmark</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+                  <div>
+                    <select
+                      class="form-select p-3 bg-transparent border-1 border-dark-subtle text-white opacity-75"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Any benchmarks</option>
+                      <option value="1">One</option>
+                      <option value="2">Two</option>
+                      <option value="3">Three</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label for="customRange1" class="form-label text-white"
+                      >Price [$5,000 - $1,00,000]</label
+                    >
+                    <input type="range" class="form-range" id="customRange1" />
+                  </div>
+                  <div>
+                    <label for="customRange1" class="form-label text-white"
+                      >Area [500 Sgr ft - 5000 Sqr ft]</label
+                    >
+                    <input type="range" class="form-range" id="customRange1" />
+                  </div>
+
+                  <div>
+                    <button
+                      type="submit"
+                      class="btn btn-warning p-3 text-white w-100"
+                    >
+                      Search
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-of-homes">
+        <div class="container">
+          <div
+            class="top p-3 d-flex justify-content-between align-items-center"
+          >
+            <div class="left">
+              <div class="h5 opacity-75">DISCOVER OUR DREAM HOUSE</div>
+              <div class="h1 border-warning" style="border-bottom: 4px solid">
+                FIND A PROPERTY
+              </div>
+            </div>
+
+            <div class="right">
+              <button class="btn btn-dark px-4 py-2" type="button">
+                View All
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="lists-of-homes d-flex justify-content-between align-items-center"
+        >
+          <div
+            class="card-house"
+            style="width: 300px; padding: 10px; background-color: white"
+          >
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center">
+                <div style="height: 300px; width: 300px; position: relative">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1680281937048-735543c5c0f7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cmVhbCUyMGVzdGF0ZXxlbnwwfHwwfHx8MA%3D%3D"
+                    alt="Card image cap"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                  />
+                  <div
+                    class="position-absolute"
+                    style="
+                      left: 0px;
+                      top: 35px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: space-around;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <span class="badge bg-warning text-dark d-block"
+                        >For rent</span
+                      >
+                    </div>
+                    <div>
+                      <span class="badge bg-dark text-white d-block"
+                        >500 sq ft</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-0 py-3">
+                  <h5 class="card-title fw-bold">
+                    Multi cushion home in tamilnadu
+                  </h5>
+                  <div class="h5 fw-bold">
+                    $5,000 /
+                    <span
+                      style="font-size: small"
+                      class="text-warning fw-normal"
+                      >For rent</span
+                    >
+                  </div>
+                  <p>
+                    <i class="uil uil-estate text-warning"></i>
+                    <span>House</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-location-point text-warning"></i>
+                    <span>67, Nearby petrol bunk, Trichy, 675557</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-calendar-alt text-warning"></i>
+                    <span>12-08-2024</span>
+                  </p>
+                  <div
+                    class="details-of-house bg-warning p-2 d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="uil uil-archway text-white"></i>
+                      <span class="text-white fw-bold">500 sqr ft</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bath text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bed text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-archive text-white"></i>
+                      <span class="text-white fw-bold">1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-house"
+            style="width: 300px; padding: 10px; background-color: white"
+          >
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center">
+                <div style="height: 300px; width: 300px; position: relative">
+                  <img
+                    src="https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                    alt="Card image cap"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                  />
+                  <div
+                    class="position-absolute"
+                    style="
+                      left: 0px;
+                      top: 35px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: space-around;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <span class="badge bg-warning text-dark d-block"
+                        >For rent</span
+                      >
+                    </div>
+                    <div>
+                      <span class="badge bg-dark text-white d-block"
+                        >500 sq ft</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-0 py-3">
+                  <h5 class="card-title fw-bold">Single home in tamilnadu</h5>
+                  <div class="h5 fw-bold">
+                    $5,000 /
+                    <span
+                      style="font-size: small"
+                      class="text-warning fw-normal"
+                      >For rent</span
+                    >
+                  </div>
+                  <p>
+                    <i class="uil uil-estate text-warning"></i>
+                    <span>House</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-location-point text-warning"></i>
+                    <span>67, Nearby petrol bunk, Trichy, 675557</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-calendar-alt text-warning"></i>
+                    <span>12-08-2024</span>
+                  </p>
+                  <div
+                    class="details-of-house bg-dark p-2 d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="uil uil-archway text-white"></i>
+                      <span class="text-white fw-bold">500 sqr ft</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bath text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bed text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-archive text-white"></i>
+                      <span class="text-white fw-bold">1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-house"
+            style="width: 300px; padding: 10px; background-color: white"
+          >
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center">
+                <div style="height: 300px; width: 300px; position: relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1444676632488-26a136c45b9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                    alt="Card image cap"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                  />
+                  <div
+                    class="position-absolute"
+                    style="
+                      left: 0px;
+                      top: 35px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: space-around;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <span class="badge bg-warning text-dark d-block"
+                        >For rent</span
+                      >
+                    </div>
+                    <div>
+                      <span class="badge bg-dark text-white d-block"
+                        >500 sq ft</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-0 py-3">
+                  <h5 class="card-title fw-bold">Double house in tamilnadu</h5>
+                  <div class="h5 fw-bold">
+                    $5,000 /
+                    <span
+                      style="font-size: small"
+                      class="text-warning fw-normal"
+                      >For rent</span
+                    >
+                  </div>
+                  <p>
+                    <i class="uil uil-estate text-warning"></i>
+                    <span>House</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-location-point text-warning"></i>
+                    <span>67, Nearby petrol bunk, Trichy, 675557</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-calendar-alt text-warning"></i>
+                    <span>12-08-2024</span>
+                  </p>
+                  <div
+                    class="details-of-house bg-warning p-2 d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="uil uil-archway text-white"></i>
+                      <span class="text-white fw-bold">500 sqr ft</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bath text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bed text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-archive text-white"></i>
+                      <span class="text-white fw-bold">1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="card-house"
+            style="width: 300px; padding: 10px; background-color: white"
+          >
+            <div class="card-body">
+              <div class="d-flex flex-column align-items-center">
+                <div style="height: 300px; width: 300px; position: relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1592595896551-12b371d546d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fHJlYWwlMjBlc3RhdGV8ZW58MHx8MHx8fDA%3D"
+                    alt="Card image cap"
+                    class="card-img-top h-100 w-100 object-fit-cover"
+                  />
+                  <div
+                    class="position-absolute"
+                    style="
+                      left: 0px;
+                      top: 35px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: space-around;
+                      width: 100%;
+                    "
+                  >
+                    <div>
+                      <span class="badge bg-warning text-dark d-block"
+                        >For rent</span
+                      >
+                    </div>
+                    <div>
+                      <span class="badge bg-dark text-white d-block"
+                        >500 sq ft</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body px-0 py-3">
+                  <h5 class="card-title fw-bold">Treble house in tamilnadu</h5>
+                  <div class="h5 fw-bold">
+                    $5,000 /
+                    <span
+                      style="font-size: small"
+                      class="text-warning fw-normal"
+                      >For rent</span
+                    >
+                  </div>
+                  <p>
+                    <i class="uil uil-estate text-warning"></i>
+                    <span>House</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-location-point text-warning"></i>
+                    <span>67, Nearby petrol bunk, Trichy, 675557</span>
+                  </p>
+                  <p>
+                    <i class="uil uil-calendar-alt text-warning"></i>
+                    <span>12-08-2024</span>
+                  </p>
+                  <div
+                    class="details-of-house bg-dark p-2 d-flex align-items-center justify-content-between"
+                  >
+                    <div>
+                      <i class="uil uil-archway text-white"></i>
+                      <span class="text-white fw-bold">500 sqr ft</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bath text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-bed text-white"></i>
+                      <span class="text-white fw-bold">2</span>
+                    </div>
+                    <div>
+                      <i class="uil uil-archive text-white"></i>
+                      <span class="text-white fw-bold">1</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
